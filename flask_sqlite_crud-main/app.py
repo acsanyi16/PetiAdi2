@@ -21,9 +21,11 @@ def saveDetails():
             name = request.form["name"]
             email = request.form["email"]
             address = request.form["address"]
+            gender = request.form["gender"]
+            age = request.form["age"]
             with sqlite3.connect("employee.db") as con:
                 cur = con.cursor()
-                cur.execute("INSERT into Employees (name, email, address) values (?,?,?)", (name, email, address))
+                cur.execute("INSERT into Employees (name, email, address,gender, age) values (?,?,?,?,?)", (name, email, address,gender, age))
                 con.commit()
                 msg = "Employee successfully Added"
         except:
