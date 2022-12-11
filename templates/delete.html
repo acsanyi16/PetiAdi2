@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>delete record</title>
+    <link href="./static/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="./static/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./static/css/style.css">
 </head>
 <body>
 
     <h3>Remove Employee from the list</h3>
 
 <form action="/deleterecord" method="post">
-Employee Id <input type="text" name="id">
-<input type="submit" value="Submit">
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Put the employee ID" id="floatingTextarea" name="id"></textarea>
+        <label for="floatingTextarea">ID</label>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
 </form>
 </body>
 </html>

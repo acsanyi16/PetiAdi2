@@ -58,9 +58,9 @@ def deleterecord():
         try:
             cur = con.cursor()
             cur.execute("delete from Employees where id = ?", id)
-            msg = "record successfully deleted"
+            msg = "Record successfully deleted"
         except:
-            msg = "can't be deleted"
+            msg = "Can't be deleted"
         finally:
             return render_template("delete_record.html", msg=msg)
 
